@@ -34,6 +34,11 @@ public class Movement : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision){
+        Invoke("JumpDelay", 0.001f);
+    }
+
+    void JumpDelay()
+    {
         onGround = true;
         jumpHeight = 500;
     }
